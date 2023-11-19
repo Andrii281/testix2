@@ -3,6 +3,7 @@ on:
   push
 jobs:
   test:
+    permissions: write-all
     runs-on: windows-latest
     steps: 
       - name: Get repository code
