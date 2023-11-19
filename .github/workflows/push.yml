@@ -1,0 +1,15 @@
+name: App
+on: 
+  push
+jobs:
+  test:
+    runs-on: windows-latest
+    steps: 
+      - name: Get repository code
+        uses: actions/checkout@v3
+      - name: install
+        run: npm i
+      - name: Testing
+        run: npm run test:coverage
+      - name: Summary
+        run: npm run test:summary
