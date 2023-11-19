@@ -15,9 +15,8 @@ jobs:
       #   run: npm run test:coverage
       # - name: Summary
       #   run: npm run test:summary
-      - name: Jest coverage report
-        uses: ArtiomTr/jest-coverage-report-action@v2.2.6
-      - name: Jest coverage diff reporter
-        uses: vgrafe/jest-reports@v0.1.9
+      - name: Jest coverage report with nix support
+        uses: robBowes/jest-coverage-report-action@test-release
+            
             
             
