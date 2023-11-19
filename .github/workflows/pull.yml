@@ -15,8 +15,9 @@ jobs:
       #   run: npm run test:coverage
       # - name: Summary
       #   run: npm run test:summary
-      - name: Jest coverage report with nix support
-        uses: robBowes/jest-coverage-report-action@test-release
+      - name: Jest Code Coverage Report
+        uses: ziishaned/jest-reporter-action@0.1.1
+            
             
             
             
