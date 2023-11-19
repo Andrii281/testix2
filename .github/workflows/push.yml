@@ -13,3 +13,5 @@ jobs:
         run: npm run test:coverage
       - name: Summary
         run: npm run test:summary
+      - name: Produce the coverage report
+        uses: insightsengineering/coverage-action@v2
