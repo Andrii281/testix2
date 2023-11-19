@@ -1,6 +1,7 @@
-name: Push
+name: Pull
 on: 
-  push
+  pull_request:
+    types: [opened, reopened, edited, closed]
 jobs:
   test:
     permissions: write-all
