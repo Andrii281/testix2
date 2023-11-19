@@ -13,5 +13,6 @@ jobs:
         run: npm run test:coverage
       - name: Summary
         run: npm run test:summary
-      - name: Produce the coverage report
-        uses: ArtiomTr/jest-coverage-report-action@v2
+      - name: Jest coverage report
+        uses: ArtiomTr/jest-coverage-report-action@v2.2.6
+            
