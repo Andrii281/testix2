@@ -14,4 +14,4 @@ jobs:
       - name: Summary
         run: npm run test:summary
       - name: Produce the coverage report
-        uses: insightsengineering/coverage-action@v2
+        uses: ArtiomTr/jest-coverage-report-action@v2
