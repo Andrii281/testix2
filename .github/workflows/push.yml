@@ -14,8 +14,8 @@ jobs:
       #   run: npm run test:coverage
       # - name: Summary
       #   run: npm run test:summary
-      - name: Jest coverage diff reporter
-        uses: vgrafe/jest-reports@v0.1.9
+      - name: Jest coverage on commit
+        uses: ShaunBulbrook/jest-coverage-report-on-commit@0.1.0
             
             
             
