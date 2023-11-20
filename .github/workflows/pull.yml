@@ -5,7 +5,7 @@ on:
 jobs:
   test:
     permissions: write-all
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps: 
       - name: Get repository code
         uses: actions/checkout@v3
