@@ -12,7 +12,9 @@ jobs:
         run: npm i
       - name: Testing
         run: npm run test:coverage
-      # - name: Summary
-      #   run: npm run test:summary
+      - name: Jest Coverage Comment
+        uses: ArtiomTr/jest-coverage-report-action@v2.2.6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
             
             
