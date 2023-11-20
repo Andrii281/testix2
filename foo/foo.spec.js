@@ -20,22 +20,22 @@ describe('biggestThan', () => {
     })
   })
 
-  // describe("should return false a is less than b", () => {
-  //   it("should return false if a is less than b, if a = 5, b = 10", () => {
-  //     const a = 5
-  //     const b = 10 
+  describe("should return false a is less than b", () => {
+    it("should return false if a is less than b, if a = 5, b = 10", () => {
+      const a = 5
+      const b = 10 
 
-  //     const result = biggestThan(a, b)
+      const result = biggestThan(a, b)
 
-  //     expect(result).toBe(false)
-  //   })
-  //   it("should return false a is less than b, if a = 7, b = 8", () => {
-  //     const a = 7
-  //     const b = 8
+      expect(result).toBe(false)
+    })
+    it("should return false a is less than b, if a = 7, b = 8", () => {
+      const a = 7
+      const b = 8
 
-  //     const result = biggestThan(a, b)
+      const result = biggestThan(a, b)
 
-  //     expect(result).toBe(false)
-  //   })
-  // })
+      expect(result).toBe(false)
+    })
+  })
 });
