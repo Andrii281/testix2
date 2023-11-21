@@ -10,6 +10,8 @@ jobs:
     steps: 
       - name: Get repository code
         uses: actions/checkout@v3
+      - name: pnpm use
+        uses: pnpm/action-setup@v2
       - name: install
         run: pnpm i
       - name: Testing
