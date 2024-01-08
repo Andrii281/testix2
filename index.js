@@ -40,20 +40,6 @@ const displaySummary = (metrics) => {
   console.log("asdasd")
   console.log("asdasd")
   console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
   console.log(
     `============================== Affected apps coverage summary ==============================
   Lines coverage         : ${metrics.linesCoverage.toFixed(2)}%
@@ -63,4 +49,8 @@ const displaySummary = (metrics) => {
   Total average coverage : ${metrics.totalCoverage.toFixed(2)}%
 ============================================================================================`,
   );
+  console.log("asdasd")
+  console.log("asdasd")
+  console.log("asdasd")
+  console.log("asdasd")
 };
