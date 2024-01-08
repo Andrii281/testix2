@@ -24,9 +24,6 @@ jobs:
         uses: ArtiomTr/jest-coverage-report-action@v2.2.6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-            
-            
-            
-            
-            
+      - name: Branch Name Check
+        uses: node ./tools/branchCheckName         
             
