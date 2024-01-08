@@ -32,6 +32,7 @@ const computeMetrics = (report) => {
 }
 
 const displaySummary = (metrics) => {
+  console.log("asdasd")
   console.log(
     `============================== Affected apps coverage summary ==============================
   Lines coverage         : ${metrics.linesCoverage.toFixed(2)}%
@@ -42,14 +43,3 @@ const displaySummary = (metrics) => {
 ============================================================================================`,
   );
 };
-
-// fs.promises.readFile('./coverage/**/*coverage-summary.json', 'utf-8').then(data => console.log(data))
-
-// const фв = fs.promises.readFile('coverage/**/coverage-summary.json', 'utf8').then(data => consple.log(data));
-
-// const readCoverageReports = async (reports) => {
-//   const reportsPromises = reports.map(f => fs.promises.readFile(f, 'utf8'));
-//   return Promise.all(reportsPromises);
-// };
-
-// console.log(readCoverageReports('coverage/**/coverage-summary.json'))

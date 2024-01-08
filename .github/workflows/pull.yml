@@ -1,0 +1,28 @@
+name: Pull
+on: 
+  pull_request:
+    branches:
+      - '*'
+jobs:
+  test:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Get repository code
+        uses: actions/checkout@v3
+      - name: pnpm use
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: install
+        run: pnpm i
+      - name: Testing
+        run: pnpm run test:coverage
+      # - name: Summary
+      #   run: npm run test:summary
+      - name: Jest Coverage Comment
+        uses: ArtiomTr/jest-coverage-report-action@v2.2.6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Branch Name Check
+        run: node ./tools/branchCheckName

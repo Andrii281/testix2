@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "lint:branch-name": "node ./tools/branchCheckName",
     "test:coverage": "jest --runInBand --coverage",
     "test:summary": "node index.js"
   },

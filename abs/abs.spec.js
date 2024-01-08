@@ -17,20 +17,20 @@ describe('abs', () => {
       expect(result).toBe(10)
     })
   }) 
-  // describe("should return same value", () => {
-  //   it("should return same value, if value = 11", () => {
-  //     const value = 11;
+  describe("should return same value", () => {
+    it("should return same value, if value = 11", () => {
+      const value = 11;
 
-  //     const result = abs(value)
+      const result = abs(value)
 
-  //     expect(result).toBe(11)
-  //   })
-  //   it("should return same value, if value = 2", () => {
-  //     const value = 2;
+      expect(result).toBe(11)
+    })
+    it("should return same value, if value = 2", () => {
+      const value = 2;
 
-  //     const result = abs(value)
+      const result = abs(value)
 
-  //     expect(result).toBe(2)
-  //   })
-  // }) 
+      expect(result).toBe(2)
+    })
+  }) 
 });
