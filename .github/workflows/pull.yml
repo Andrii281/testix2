@@ -25,5 +25,4 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Branch Name Check
-        uses: node ./tools/branchCheckName         
-            
+        run: node ./tools/branchCheckName
