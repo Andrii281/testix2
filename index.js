@@ -32,14 +32,14 @@ const computeMetrics = (report) => {
 }
 
 const displaySummary = (metrics) => {
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
+  console.log("qeqwd ")
+  console.log("qweqw eqw")
+  console.log("wqqweqw")
+  console.log("qwe")
+  console.log("asdsadqwe")
+  console.log("asdasdas")
+  console.log("wqeqweqw")
+  console.log("qweqweq")
   console.log(
     `============================== Affected apps coverage summary ==============================
   Lines coverage         : ${metrics.linesCoverage.toFixed(2)}%
