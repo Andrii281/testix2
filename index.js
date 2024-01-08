@@ -38,8 +38,12 @@ const displaySummary = (metrics) => {
   console.log("asdasd")
   console.log("asdasd")
   console.log("asdasd")
-
-
+  console.log("asdasd")
+  console.log("asdasd")
+  console.log("asdasd")
+  console.log("asdasd")
+  console.log("asdasd")
+  console.log("asdasd")
   console.log("asdasd")
   console.log("asdasd")
   console.log("asdasd")
