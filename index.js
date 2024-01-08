@@ -32,6 +32,7 @@ const computeMetrics = (report) => {
 }
 
 const displaySummary = (metrics) => {
+  console.log("asdasd")
   console.log(
     `============================== Affected apps coverage summary ==============================
   Lines coverage         : ${metrics.linesCoverage.toFixed(2)}%
