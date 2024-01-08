@@ -49,8 +49,8 @@ const displaySummary = (metrics) => {
   Total average coverage : ${metrics.totalCoverage.toFixed(2)}%
 ============================================================================================`,
   );
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
-  console.log("asdasd")
+  console.log("qweqweqw")
+  console.log("aseqweqwqwdasd")
+  console.log("eqw")
+  console.log("asdaweqweqeqsd")
 };
