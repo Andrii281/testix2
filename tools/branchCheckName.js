@@ -16,7 +16,7 @@ const branchName =
   }
 })();
 
-export function lintBranchName(branchNameToCheck) {
+function lintBranchName(branchNameToCheck) {
   const whiteListCheck = branchNameToCheck.match(/^(main|develop)$/);
 
   if (whiteListCheck !== null) {
