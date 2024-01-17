@@ -26,6 +26,10 @@ jobs:
       #   run: npm run test:summary
       - name: Get Env
         run: pnpm run get-env
+      - name: Set Env
+        run: pnpm run set-env
+      - name: Get Env
+        run: pnpm run get-env
       - name: Jest Coverage Comment
         uses: actions/github-script@v6
         with:
