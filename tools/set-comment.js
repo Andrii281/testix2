@@ -1,5 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+const { Octokit } = require('@octokit/rest');
 
 async function run() {
   try {
@@ -13,7 +14,7 @@ async function run() {
     }
     const pull_request_number = context.payload.pull_request.number;
 
-    const octokit = new github.GitHub(github_token);
+    const octokit = new Octokit({auth: github_token});
     const new_comment = octokit.issues.createComment({
         ...context.repo,
         issue_number: pull_request_number,
