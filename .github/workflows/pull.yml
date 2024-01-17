@@ -30,6 +30,8 @@ jobs:
         run: pnpm run set-env
       - name: Get Env
         run: pnpm run get-env
+      - name: Set comment
+        run: pnpm run set-comment
       - name: Jest Coverage Comment
         uses: actions/github-script@v6
         with:

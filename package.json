@@ -9,12 +9,15 @@
     "test:coverage": "jest --runInBand --coverage",
     "test:summary": "node index.js",
     "get-env": "node ./tools/getEnv",
-    "set-env": "node ./tools/setEnv"
+    "set-env": "node ./tools/setEnv",
+    "set-comment": "node ./tools/set-comment"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0",
     "glob": "^10.3.10"
   },
   "devDependencies": {
