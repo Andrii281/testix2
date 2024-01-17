@@ -24,21 +24,10 @@ jobs:
         run: pnpm run test:coverage
       # - name: Summary
       #   run: npm run test:summary
-      - name: Get Env
-        run: pnpm run get-env
-      - name: Set Env
-        run: pnpm run set-env
-      - name: Get Env
-        run: pnpm run get-env
-      - name: Set comment
-        run: pnpm run set-comment
-      - name: Jest Coverage Comment
-        uses: actions/github-script@v6
+      - name: Read file contents
+        id: read_file
+        uses: andstor/file-reader-action@v1
         with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: `${process.env.DAY_OF_WEEK}`
-            })
+          path: "package.json"
+      - name: File contents
+        run: echo "${ steps.read_file.outputs.contents }"
