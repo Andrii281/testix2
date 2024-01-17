@@ -3,6 +3,10 @@ on:
   pull_request:
     branches:
       - '*'
+
+env:
+  DAY_OF_WEEK: Monday
+  
 jobs:
   test:
     permissions: write-all
@@ -28,5 +32,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '👋 Thanks for reporting!'
+              body: `${process.env.DAY_OF_WEEK}`
             })
