@@ -29,6 +29,10 @@ jobs:
         uses: andstor/file-reader-action@v1
         with:
           path: "package.json"
+      - name: jest comentins cubertura
+        uses: ArtiomTr/jest-coverage-report-action@v2.2.6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Jest Coverage Comment
         uses: actions/github-script@v6
         with:
