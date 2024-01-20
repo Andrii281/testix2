@@ -29,8 +29,6 @@ jobs:
         uses: andstor/file-reader-action@v1
         with:
           path: "package.json"
-      - name: Set-comment
-        run: pnpm run set-comment 
       - name: Jest coverage report
         uses: ArtiomTr/jest-coverage-report-action@v2.2.6
       #- name: Jest Coverage Comment
