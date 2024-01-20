@@ -31,9 +31,6 @@ jobs:
           path: "package.json"
       - name: Jest coverage report
         uses: ArtiomTr/jest-coverage-report-action@v2.2.6
-        with:
-          coverage-file: ./coverage/coverage-summary.json
-          skip-step: all
       - name: "set Message"
         run: pnpm run set-comment
       #- name: Jest Coverage Comment
