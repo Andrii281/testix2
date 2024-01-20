@@ -33,6 +33,8 @@ jobs:
       #  uses: ArtiomTr/jest-coverage-report-action@v2.2.6
       - name: "set Message"
         run: pnpm run set-comment
+        with:
+          github-token: ${{ secrets.SECRET_TOKEN }}
       #- name: Jest Coverage Comment
       #  uses: actions/github-script@v6
       #  with:

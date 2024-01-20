@@ -4,7 +4,7 @@ const { core } = require('@actions/core');
 
 async function run() {
   try {
-    const token = getInput('github-token', {
+    const token = core.getInput('github-token', {
       required: true,
     });
     const message = " ddsfsdfdsf"
