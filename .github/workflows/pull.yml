@@ -29,22 +29,15 @@ jobs:
         uses: andstor/file-reader-action@v1
         with:
           path: "package.json"
-      - name: jest comentins cubertura
-        uses: ArtiomTr/jest-coverage-report-action@v2.2.6
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Comment Pull Request
-        uses: thollander/actions-comment-pull-request@v2.4.3
-        with:
-          message: |
-            Hello world ! :wave:
-      - name: Jest Coverage Comment
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: `${ env.read_file.outputs.contents }`
-            })
+      - name: Set-comment
+        run: npm run set-comment 
+      #- name: Jest Coverage Comment
+      #  uses: actions/github-script@v6
+      #  with:
+      #    script: |
+      #      github.rest.issues.createComment({
+      #        issue_number: context.issue.number,
+      #        owner: context.repo.owner,
+      #        repo: context.repo.repo,
+      #        body: `${ env.read_file.outputs.contents }`
+      #      })
