@@ -30,7 +30,7 @@ jobs:
         with:
           path: "package.json"
       - name: Set-comment
-        run: npm run set-comment 
+        run: pnpm run set-comment 
       #- name: Jest Coverage Comment
       #  uses: actions/github-script@v6
       #  with:
