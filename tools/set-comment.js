@@ -16,7 +16,7 @@ async function run() {
       });
 
   } catch (error) {
-    console.log("error", error.message)
+    console.log("error: ", error.message)
   }
 }
 
