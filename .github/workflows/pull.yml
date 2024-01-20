@@ -33,6 +33,13 @@ jobs:
         uses: ArtiomTr/jest-coverage-report-action@v2.2.6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: comment
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: |
+            The PR is being built...
+          comment_tag: to_delete
+          mode: delete
       - name: Jest Coverage Comment
         uses: actions/github-script@v6
         with:
