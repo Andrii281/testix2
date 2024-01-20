@@ -10,6 +10,7 @@
     "test:summary": "node index.js",
     "get-env": "node ./tools/getEnv",
     "set-env": "node ./tools/setEnv",
+    "branch-name-check": "node ./tools/branchCheckName",
     "set-comment": "node ./tools/set-comment"
   },
   "keywords": [],

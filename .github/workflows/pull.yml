@@ -29,8 +29,10 @@ jobs:
         uses: andstor/file-reader-action@v1
         with:
           path: "package.json"
-      - name: Jest coverage report
-        uses: ArtiomTr/jest-coverage-report-action@v2.2.6
+      #- name: Jest coverage report
+      #  uses: ArtiomTr/jest-coverage-report-action@v2.2.6
+      - name: "Branch name check"
+        run: pnpm run branch-name-check
       - name: "set Message"
         run: pnpm run set-comment
       #- name: Jest Coverage Comment
