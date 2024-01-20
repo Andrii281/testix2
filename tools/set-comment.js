@@ -1,5 +1,5 @@
 // import { context, getOctokit, core } from '@actions/github';
-const { context, getOctokit } = require('@actions/github');
+const github = require('@actions/github');
 const { core } = require('@actions/core');
 
 async function run() {
@@ -8,10 +8,10 @@ async function run() {
       required: true,
     });
     const message = " ddsfsdfdsf"
-    const octokit = getOctokit(token);
+    const octokit = github.getOctokit(token);
     const new_comment = await octokit.rest.repos.createCommitComment({
-        ...context.repo,
-        commit_sha: context.sha,
+        ...github.context.repo,
+        commit_sha: github.context.sha,
         body: message
       });
 
