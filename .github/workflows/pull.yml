@@ -14,9 +14,6 @@ jobs:
     steps: 
       - name: Get repository code
         uses: actions/checkout@v3
-      - uses: ./
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: pnpm use
         uses: pnpm/action-setup@v2
         with:
