@@ -24,13 +24,8 @@ jobs:
         run: pnpm run test:coverage
       # - name: Summary
       #   run: npm run test:summary
-      - name: Read file contents
-        id: read_file
-        uses: andstor/file-reader-action@v1
-        with:
-          path: "package.json"
       - name: Jest coverage report
-       uses: ArtiomTr/jest-coverage-report-action@v2.2.6
+        uses: ArtiomTr/jest-coverage-report-action@v2.2.6
       # - name: "set Message"
         # run: pnpm run set-comment
       #- name: Jest Coverage Comment
