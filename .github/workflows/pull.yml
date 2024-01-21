@@ -22,8 +22,8 @@ jobs:
         run: pnpm i
       # - name: Testing
       #   run: pnpm run test:coverage
-      # - name: Summary
-      #   run: npm run test:summary
+      - name: Summary
+        run: npm run test:summary
       - name: Jest coverage report
         uses: ArtiomTr/jest-coverage-report-action@v2.2.6
         with:
