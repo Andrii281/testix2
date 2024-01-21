@@ -26,7 +26,7 @@ jobs:
       #   run: npm run test:summary
       - name: Jest coverage report
         uses: ArtiomTr/jest-coverage-report-action@v2.2.6
-        with: |
+        with:
           annotations: asdasdwqwqd
           package-manager: pnpm
       # - name: "set Message"
