@@ -23,8 +23,8 @@ jobs:
         # run: pnpm run test:coverage
       - name: Jest coverage report
         uses: ArtiomTr/jest-coverage-report-action@v2.2.6
+          test-script: pnpm run test:coverage
 
-          # test-script: pnpm run test:coverage
       # - name: "set Message"
         # run: pnpm run set-comment
       #- name: Jest Coverage Comment
