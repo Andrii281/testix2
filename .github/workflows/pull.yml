@@ -27,10 +27,9 @@ jobs:
       - name: Jest coverage report
         uses: ArtiomTr/jest-coverage-report-action@v2.2.6
         with:
-          coverage-file:  ./coverage/coverage-final.json
-          base-coverage-file: ./coverage/coverage-final.json
           annotations: all
           skip-step: all
+          test-script: pnpm run test:coverage
       # - name: "set Message"
         # run: pnpm run set-comment
       #- name: Jest Coverage Comment

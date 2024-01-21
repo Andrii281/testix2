@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "lint:branch-name": "node ./tools/branchCheckName",
-    "test:coverage": "jest --runInBand --coverage",
+    "test:coverage": "npx jest --ci --json --testLocationInResults --outputFile=report.json",
     "test:summary": "node index.js",
     "get-env": "node ./tools/getEnv",
     "set-env": "node ./tools/setEnv",
