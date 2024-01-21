@@ -29,6 +29,7 @@ jobs:
         with:
           annotations: all
           package-manager: pnpm
+          skip-step: all
       # - name: "set Message"
         # run: pnpm run set-comment
       #- name: Jest Coverage Comment
