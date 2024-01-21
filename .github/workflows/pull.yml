@@ -3,9 +3,6 @@ on:
   pull_request:
     branches:
       - '*'
-
-env:
-  TOKEN:  ${{ secrets.GITHUB_TOKEN }} 
   
 jobs:
   test:
