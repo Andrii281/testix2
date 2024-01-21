@@ -27,6 +27,7 @@ jobs:
       - name: Jest coverage report
         uses: ArtiomTr/jest-coverage-report-action@v2.2.6
         with:
+          github-token: ${{ secrets.SECRET_TOKEN }}
           annotations: all
           test-script: pnpm run test:coverage
 
