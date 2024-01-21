@@ -22,13 +22,15 @@ jobs:
         run: pnpm i
       # - name: Testing
       #   run: pnpm run test:coverage
-      - name: Summary
-        run: pnpm run test:coverage
+      # - name: Summary
+        # run: pnpm run test:coverage
       - name: Jest coverage report
         uses: ArtiomTr/jest-coverage-report-action@v2.2.6
         with:
           annotations: all
           skip-step: all
+          test-script: yarn jest
+
           # test-script: pnpm run test:coverage
       # - name: "set Message"
         # run: pnpm run set-comment
