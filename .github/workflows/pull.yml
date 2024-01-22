@@ -5,7 +5,7 @@ on:
       - '*'
   
 jobs:
-  test:coverage:
+  coverage:
     permissions: write-all
     runs-on: ubuntu-latest
     steps: 
@@ -19,7 +19,7 @@ jobs:
         run: pnpm i
       - name: Summary
         run: pnpm run test:coverage
-  coverage:
+  cobertura:
     permissions: write-all
     runs-on: ubuntu-latest
     steps: 
