@@ -5,7 +5,20 @@ on:
       - '*'
   
 jobs:
-  test:
+  install:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Get repository code
+        uses: actions/checkout@v3
+      - name: pnpm use
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: install
+        run: pnpm i
+jobs:
+  coverage:
     permissions: write-all
     runs-on: ubuntu-latest
     steps: 
