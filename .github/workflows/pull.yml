@@ -5,7 +5,7 @@ on:
       - '*'
   
 jobs:
-  install:
+  coverage:
     runs-on: ubuntu-latest
     steps: 
       - name: Get repository code
@@ -16,14 +16,23 @@ jobs:
           version: 8
       - name: install
         run: pnpm i
-  coverage:
-    needs: [install]
-    - name: Summary
-      run: pnpm run test:coverage
+      - name: Summary
+        run: pnpm run test:coverage
   cobertura:
-    needs: [install]
-    - name: Jest coverage report
-      uses: ArtiomTr/jest-coverage-report-action@v2.2.6
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Get repository code
+        uses: actions/checkout@v3
+      - name: pnpm use
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: install
+        run: pnpm i
+      - name: Summary
+        run: pnpm run test:coverage
+      - name: Jest coverage report
+        uses: ArtiomTr/jest-coverage-report-action@v2.2.6
       # - name: Testing
       #   run: pnpm run test:coverage
       # - name: Summary
