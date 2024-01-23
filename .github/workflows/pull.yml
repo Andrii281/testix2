@@ -4,45 +4,26 @@ on:
     branches:
       - '*'
   
-before_script:
-  runs-on: ubuntu-latest
-    steps: 
-      - name: Get repository code
-        uses: actions/checkout@v3
-      - name: pnpm use
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - name: install
-        run: pnpm i
-
 jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Get repository code
+        uses: actions/checkout@v3
+      - name: pnpm use
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: install
+        run: pnpm i
   coverage:
-    runs-on: ubuntu-latest
-    steps: 
-      - name: Get repository code
-        uses: actions/checkout@v3
-      - name: pnpm use
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - name: install
-        run: pnpm i
-      - name: Summary
-        run: pnpm run test:coverage
+    needs: [install]
+    - name: Summary
+      run: pnpm run test:coverage
   cobertura:
-    runs-on: ubuntu-latest
-    steps: 
-      - name: Get repository code
-        uses: actions/checkout@v3
-      - name: pnpm use
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - name: install
-        run: pnpm i
-      - name: Jest coverage report
-        uses: ArtiomTr/jest-coverage-report-action@v2.2.6
+    needs: [install]
+    - name: Jest coverage report
+      uses: ArtiomTr/jest-coverage-report-action@v2.2.6
       # - name: Testing
       #   run: pnpm run test:coverage
       # - name: Summary
