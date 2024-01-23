@@ -3,8 +3,22 @@ on:
   pull_request:
     branches:
       - '*'
+  
 jobs:
-  test:
+  coverage:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Get repository code
+        uses: actions/checkout@v3
+      - name: pnpm use
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: install
+        run: pnpm i
+      - name: Summary
+        run: pnpm run test:coverage
+  cobertura:
     permissions: write-all
     runs-on: ubuntu-latest
     steps: 
@@ -16,13 +30,14 @@ jobs:
           version: 8
       - name: install
         run: pnpm i
-      - name: Testing
-        run: pnpm run test:coverage
-      # - name: Summary
-      #   run: npm run test:summary
-      - name: Jest Coverage Comment
+      - name: Jest coverage report
         uses: ArtiomTr/jest-coverage-report-action@v2.2.6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Branch Name Check
-        run: node ./tools/branchCheckName
+          package-manager: pnpm
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name:
+        run: echo "${{ toJSON(github) }}"
+    

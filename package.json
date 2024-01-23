@@ -6,14 +6,25 @@
   "scripts": {
     "test": "jest",
     "lint:branch-name": "node ./tools/branchCheckName",
-    "test:coverage": "jest --runInBand --coverage",
-    "test:summary": "node index.js"
+    "test:coverage": "npx jest --ci --json --testLocationInResults --outputFile=report.json",
+    "test:summary": "node index.js",
+    "get-env": "node ./tools/getEnv",
+    "set-env": "node ./tools/setEnv",
+    "branch-name-check": "node ./tools/branchCheckName",
+    "set-comment": "node ./tools/set-comment"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "glob": "^10.3.10"
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0",
+    "@octokit/rest": "^20.0.2",
+    "ci": "^2.3.0",
+    "glob": "^10.3.10",
+    "install": "^0.13.0",
+    "npm": "^10.3.0",
+    "octonode": "^0.10.2"
   },
   "devDependencies": {
     "jest": "^29.7.0"
