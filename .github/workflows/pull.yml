@@ -19,6 +19,7 @@ jobs:
       - name: Summary
         run: pnpm run test:coverage
   cobertura:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps: 
       - name: Get repository code
