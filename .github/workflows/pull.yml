@@ -35,23 +35,5 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           package-manager: pnpm
-      # - name: Testing
-      #   run: pnpm run test:coverage
-      # - name: Summary
-        # run: pnpm run test:coverage
-      
-        # with:
-          # test-script: pnpm run test:coverage
-
-      # - name: "set Message"
-        # run: pnpm run set-comment
-      #- name: Jest Coverage Comment
-      #  uses: actions/github-script@v6
-      #  with:
-      #    script: |
-      #      github.rest.issues.createComment({
-      #        issue_number: context.issue.number,
-      #        owner: context.repo.owner,
-      #        repo: context.repo.repo,
-      #        body: `${ env.read_file.outputs.contents }`
-      #      })
+  print: 
+    run: echo ${{ github }}
